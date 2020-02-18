@@ -41,7 +41,7 @@ function getMongoClient(app) {
                 console.log('Unable to connect to database');
                 reject(err);
             } else {
-                app.listen(3000, () => console.log('connected to database, app listening on port 3000'));
+                app.listen(process.env.PORT || 3000, () => console.log('connected to database, app listening on port 3000'));
                 resolve(state.dbClient); // Return MongoClient
             }
         });
