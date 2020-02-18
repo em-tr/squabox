@@ -1,0 +1,10 @@
+<div class="col">
+    {{#if pages}}
+        {{#each pages}}
+            {{>previewCard}}
+            <br>
+        {{/each}}
+    {{else}}
+        <p>Seems like there are no post that fits those keywords!</p>
+    {{/if}}
+</div>

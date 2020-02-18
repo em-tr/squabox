@@ -1,0 +1,42 @@
+.chips {
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    height: 2em;
+    margin: 2px;
+    text-align: center;
+    line-height: 1em;
+    display: inline-block;
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.chips:after {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f067";
+    font: normal normal normal 14px/1 FontAwesome;
+    font-weight: 900;
+
+}
+
+.active-chip {
+    background-color: dodgerBlue;
+}
+
+.active-chip:after {
+    content: "\f00c";
+}
+
+.chip-static {
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    height: 2em;
+    margin: 2px;
+    text-align: center;
+    line-height: 1em;
+    display: inline-block;
+    background-color: lightgrey;
+}

@@ -1,0 +1,41 @@
+{{> header }}
+<h1>All Layouts</h1>
+<a class="btn btn-dark mt-4" href="/admin/layout/createLayout">Create Layout</a>
+{{#if layouts}}
+    <table class="table mt-4">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Rows</th>
+            <th scope="col">Columns</th>
+            <th scope="col">Status</th>
+            <th scope="col">Erstellungsdatum</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody class="all-layouts">
+        {{#each layouts}}
+            <tr class="layout" data-id="{{_id}}">
+                <th scope="row">{{_id}}</th>
+                <td>{{name}}</td>
+                <td>{{rows}}</td>
+                <td>{{columns}}</td>
+                <td>{{#if status}}<span class="badge badge-success">active</span>{{else}}<span class="badge badge-secondary">inactive</span>{{/if}}</td>
+                <td>{{creationDate}}</td>
+                <td><a class="btn btn-dark" id="editLayout" data-id="{{_id}}" href="/admin/layout/edit/{{_id}}">Edit</a></td>
+                <td><button class="btn btn-danger" id="deleteLayout" data-id="{{_id}}">Delete</button></td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <div class="row pt-4">
+        <p>
+            Seems like you haven't created a Layout yet. <br>
+        </p>
+    </div>
+{{/if}}
+{{>footer}}
+

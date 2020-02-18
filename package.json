@@ -1,0 +1,41 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint-fix": "eslint --fix --ignore-path .gitignore .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@r-n-d.informatik.hs-augsburg.de:2222/nodejs-ws1920/squabox/cms_bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.3.0",
+    "html-entities": "^1.2.1",
+    "moment": "^2.24.0",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.7.13",
+    "path": "^0.12.7",
+    "quill": "^1.3.6",
+    "quilljs-markdown": "0.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.1",
+    "eslint-config-strongloop": "^2.1.0",
+    "mongoku": "^1.3.0",
+    "nodemon": "^2.0.2"
+  }
+}

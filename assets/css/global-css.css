@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/leaguespartan-bold.eot');
+    src: url('../fonts/leaguespartan-bold.eot?#iefix') format('embedded-opentype'), url('../font/leaguespartan-bold.woff2') format('woff2'), url('../font/leaguespartan-bold.woff') format('woff'), url('../font/leaguespartan-bold.ttf') format('truetype'), url('../font/leaguespartan-bold.svg#league_spartanbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'League Spartan', 'Arial', sans-serif;
+}
+
+.squaboxLogo {
+    width: 20%;
+}
+
+.btn-dark {
+    color: white !important;
+}

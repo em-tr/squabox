@@ -1,0 +1,38 @@
+<div class="col">
+    <h1>{{{username}}}'s PAGES</h1>
+{{#if pages}}
+    <table class="table mt-4">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Status</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Keywords</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody class="all-pages">
+        {{#each pages}}
+            <tr>
+                <th scope="row"><a href="/pages/{{_id}}">{{_id}}</a></th>
+                <td>{{status}}</td>
+                <td>{{title}}</td>
+                <td>{{description}}</td>
+                <td>{{>keywordChipStatic}}</td>
+                <td><a class="btn btn-dark" href="/pages/{{_id}}" style="left: 40%;">show preview</a></td>
+                <td><a class="btn btn-dark" href="/admin/pages/editPage/{{_id}}" style="left: 40%;">edit</a></td>
+                <td><a class="btn btn-danger" href="/admin/pages/deletePage/{{_id}}" onclick="return confirm('Are you sure you want to delete this page?')" style="left: 40%;">delete</a></td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <p>
+        Seems like you haven't created a page yet. <br>
+    </p>
+{{/if}}
+    <a class="btn btn-dark mt-4" href="/admin/pages/addPage">Add page</a>
+</div>

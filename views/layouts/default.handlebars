@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+{{>header}}
+<body>
+{{#if username}}
+    {{>admin/admin-sidenav}}
+{{else}}
+    {{>toolbar}}
+{{/if}}
+<div class="container p-4">
+    {{{ body }}}
+    {{>footer}}
+</div>
+</body>
+</html>

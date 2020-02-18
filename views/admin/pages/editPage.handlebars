@@ -1,0 +1,60 @@
+<script src="/js/addPage.js"></script>
+<div class="col-md-10">
+    <form action="/admin/pages/addPage" method="post" autocomplete="off">
+        <h1>Edit Page</h1>
+        <div class="row pt-4">
+            <div class="col">
+
+            </div>
+            <div class="col"></div>
+        </div>
+        <div id="editor-toolbar"></div>
+        <div class="container-fluid gridLayoutPreview">
+            <div class="container gridLayoutContainer gridLayoutContainerAddPage">
+            </div>
+        </div>
+        <div id="layout-target"></div>
+        <div class="row pt-4">
+            <div class="col">
+                <div class="form-group">
+                    <label for="title">Title</label>{{page.title}}
+                    <input value="{{page.title}}" type="text" class="form-control" name="title" id="title" placeholder="pagetitle">
+                    <small id="titleHelp" class="form-text text-muted">http://www.example.de/pagetitle</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select class="form-control" name="status" id="status">
+                        {{#ifeq page.status 'public'}}
+                        <option value="public" selected>Public</option>
+                        <option value="private">Private</option>
+                        {{else}}
+                        <option value="public">Public</option>
+                        <option value="private" selected>Private</option>
+                        {{/ifeq}}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+                    <small id="descriptionHelp" class="form-text text-muted">
+                        50-160 characters recommended
+                    </small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="keywords">Keywords</label>
+                    <input type="text" class="form-control" name="keywords" id="keywords"
+                           placeholder="keywords">
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-dark col-md-2 offset-md-5" type="submit">Save</button>
+    </form>
+</div>

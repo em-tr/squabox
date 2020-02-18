@@ -1,0 +1,31 @@
+<div class="row pt-4 align-items-center h-100">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label class="offset-md-5" for="layoutName"><strong>Layout Name</strong></label>
+            <input type="text" class="form-control form-control-lg rounded-pill" name="layoutName" id="layoutName" {{#each layouts}}value="{{name}}"{{else}}{{/each}} required
+                   placeholder="Enter a name">
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group">
+            <label class="offset-md-5" for="columns"><strong>Columns</strong></label>
+            <input type="number" class="form-control form-control-lg rounded-pill" name="columns" id="columns" required
+                   placeholder="Enter Number of cols">
+        </div>
+    </div>
+    <div class="col-md-3 mx-auto pt-3">
+        <button id="addRow" class="btn btn-dark justify-content-center align-self-center addRow">Add Row</button>
+    </div>
+</div>
+<hr/>
+<div class="gridLayoutPreview">
+    <div class="gridLayoutContainer">
+    </div>
+</div>
+
+<div class="row pt-4">
+    <div class="col offset-5">
+        <button id="saveLayout" class="btn btn-dark saveLayout">Save Layout</button>
+    </div>
+</div>

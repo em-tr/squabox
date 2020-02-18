@@ -1,0 +1,13 @@
+.layout-preview {
+    width: 90%;
+}
+.gridLayoutPreview {
+    margin: 10px;
+}
+.rows {
+    display: flex;
+    flex-direction: row;
+}
+.column{
+    margin: 4px;
+}
