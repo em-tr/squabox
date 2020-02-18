@@ -33,6 +33,7 @@
     "quilljs-markdown": "0.0.3"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "eslint": "^6.7.1",
     "eslint-config-strongloop": "^2.1.0",
     "mongoku": "^1.3.0",
